@@ -1,0 +1,231 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --text: #1f2937;
+    --light: #f3f4f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    /* position:relative; */
+    top: 0;
+    width: 100%;
+    /* background: white; */
+    /* padding: 1rem; */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    background-image: linear-gradient(to left, rgba(198, 105, 34, 0.878),rgb(97, 20, 105),rgb(2, 2, 34));
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 ;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0%;
+    padding: 0%;
+    /* font-size: 1.5rem; */
+    /* font-weight: bold; */
+    /* color: var(--primary); */
+    /* object-fit: cover; */
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.logo img {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    color: aliceblue;
+    /* background-color: #2563eb; */
+
+}
+
+.nav-links a {
+    /* color: whitesmoke; */
+    /* background-color: aqua; */
+    color: #ddd;
+    text-decoration: none;
+    /* color: var(--text); */
+    font-weight: 500;
+}
+
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden; /* Ensures child elements don't overflow */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/backgroundimg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px); /* Adjust the blur intensity */
+    z-index: -1; /* Places the background behind the content */
+}
+
+.hero-content {
+    /* background-position: center; */
+    /* align-items: center; */
+    position: relative;
+    z-index: 1; /* Ensures the content appears above the blurred background */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+section {
+    padding: 5rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+footer {
+    background: var(--text);
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
